@@ -11,24 +11,24 @@ public class ApplicationRunner {
 
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        var context = new ClassPathXmlApplicationContext("application.xml");
         System.out.println(context.getBean("p1", ConnectionPool.class));
 
-       ConnectionPool cp = context.getBean("p1", ConnectionPool.class);
+        var cp = context.getBean("p1", ConnectionPool.class);
        System.out.println(cp);
         //System.out.println(context.getBean("p1") + " \n" + context.getBean("p2"));
-//        Container container = new Container();
+//        var container = new Container();
 
-//        ConnectionPool connectionPool = new ConnectionPool();
-//        UserRepository userRepository = new UserRepository(connectionPool);
-//        CompanyRepository companyRepository = new CompanyRepository(connectionPool);
-//        UserService userService = new UserService(userRepository, companyRepository);
+//        var connectionPool = new ConnectionPool();
+//        var userRepository = new UserRepository(connectionPool);
+//        var companyRepository = new CompanyRepository(connectionPool);
+//        var userService = new UserService(userRepository, companyRepository);
 
-//        ConnectionPool connectionPool = container.get(ConnectionPool.class);
-//        UserRepository userRepository = container.get(UserRepository.class);
-//        CompanyRepository companyRepository = container.get(CompanyRepository.class);
+//        var connectionPool = container.get(ConnectionPool.class);
+//        var userRepository = container.get(UserRepository.class);
+//        var companyRepository = container.get(CompanyRepository.class);
 
-//        UserService userService = container.get(UserService.class);
+//        var userService = container.get(UserService.class);
         // TODO: 17.11.2021 userService
 
     }
